@@ -1,8 +1,0 @@
---- elixir-1.7.3/Makefile~	2018-08-24 18:46:27.000000000 +0000
-+++ elixir-1.7.3/Makefile	2018-09-14 13:43:15.045835252 +0000
-@@ -1,4 +1,4 @@
--PREFIX ?= /usr/local
-+PREFIX ?= /usr
- SHARE_PREFIX ?= $(PREFIX)/share
- CANONICAL := v1.7/
- ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
