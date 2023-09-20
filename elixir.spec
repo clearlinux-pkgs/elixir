@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : elixir
-Version  : 1.15.5
-Release  : 23
-URL      : https://github.com/elixir-lang/elixir/archive/v1.15.5/elixir-1.15.5.tar.gz
-Source0  : https://github.com/elixir-lang/elixir/archive/v1.15.5/elixir-1.15.5.tar.gz
+Version  : 1.15.6
+Release  : 24
+URL      : https://github.com/elixir-lang/elixir/archive/v1.15.6/elixir-1.15.6.tar.gz
+Source0  : https://github.com/elixir-lang/elixir/archive/v1.15.6/elixir-1.15.6.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -51,10 +51,10 @@ man components for the elixir package.
 
 
 %prep
-%setup -q -n elixir-1.15.5
-cd %{_builddir}/elixir-1.15.5
+%setup -q -n elixir-1.15.6
+cd %{_builddir}/elixir-1.15.6
 pushd ..
-cp -a elixir-1.15.5 buildavx2
+cp -a elixir-1.15.6 buildavx2
 popd
 
 %build
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693247326
+export SOURCE_DATE_EPOCH=1695219585
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -80,7 +80,7 @@ make  %{?_smp_mflags}  PREFIX=/usr
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1693247326
+export SOURCE_DATE_EPOCH=1695219585
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/elixir
 cp %{_builddir}/elixir-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/elixir/a6a5418b4d67d9f3a33cbf184b25ac7f9fa87d33 || :
