@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : elixir
-Version  : 1.15.7
-Release  : 26
-URL      : https://github.com/elixir-lang/elixir/archive/v1.15.7/elixir-1.15.7.tar.gz
-Source0  : https://github.com/elixir-lang/elixir/archive/v1.15.7/elixir-1.15.7.tar.gz
+Version  : 1.16.0
+Release  : 27
+URL      : https://github.com/elixir-lang/elixir/archive/v1.16.0/elixir-1.16.0.tar.gz
+Source0  : https://github.com/elixir-lang/elixir/archive/v1.16.0/elixir-1.16.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -53,10 +53,10 @@ man components for the elixir package.
 
 
 %prep
-%setup -q -n elixir-1.15.7
-cd %{_builddir}/elixir-1.15.7
+%setup -q -n elixir-1.16.0
+cd %{_builddir}/elixir-1.16.0
 pushd ..
-cp -a elixir-1.15.7 buildavx2
+cp -a elixir-1.16.0 buildavx2
 popd
 
 %build
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1701953755
+export SOURCE_DATE_EPOCH=1703280562
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -99,7 +99,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1701953755
+export SOURCE_DATE_EPOCH=1703280562
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/elixir
 cp %{_builddir}/elixir-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/elixir/a6a5418b4d67d9f3a33cbf184b25ac7f9fa87d33 || :
@@ -264,6 +264,7 @@ popd
 /usr/lib/elixir/lib/elixir/ebin/Elixir.Map.beam
 /usr/lib/elixir/lib/elixir/ebin/Elixir.MapSet.beam
 /usr/lib/elixir/lib/elixir/ebin/Elixir.MatchError.beam
+/usr/lib/elixir/lib/elixir/ebin/Elixir.MismatchedDelimiterError.beam
 /usr/lib/elixir/lib/elixir/ebin/Elixir.Module.LocalsTracker.beam
 /usr/lib/elixir/lib/elixir/ebin/Elixir.Module.ParallelChecker.beam
 /usr/lib/elixir/lib/elixir/ebin/Elixir.Module.Types.Behaviour.beam
@@ -378,6 +379,7 @@ popd
 /usr/lib/elixir/lib/elixir/ebin/elixir_sup.beam
 /usr/lib/elixir/lib/elixir/ebin/elixir_tokenizer.beam
 /usr/lib/elixir/lib/elixir/ebin/elixir_utils.beam
+/usr/lib/elixir/lib/elixir/ebin/iex.beam
 /usr/lib/elixir/lib/ex_unit/ebin/Elixir.ExUnit.AssertionError.beam
 /usr/lib/elixir/lib/ex_unit/ebin/Elixir.ExUnit.Assertions.beam
 /usr/lib/elixir/lib/ex_unit/ebin/Elixir.ExUnit.CLIFormatter.beam
